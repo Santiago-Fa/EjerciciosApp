@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_layout_nueva_rutina"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    tools:context=".NuevaRutina">
+
+    <TextView
+        android:id="@+id/tv_nombre_nueva_rutina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="20dp"
+        android:text="Nueva rutina"
+        android:textColor="@color/gris80"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/divisor1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E6E6E6"
+        app:layout_constraintEnd_toEndOf="@+id/tv_nombre_nueva_rutina"
+        app:layout_constraintStart_toStartOf="@+id/tv_nombre_nueva_rutina"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nombre_nueva_rutina" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linear_botones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divisor1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <EditText
+                    android:id="@+id/input_titulo_rutina"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:backgroundTint="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="Título"
+                    android:inputType="text"
+                    android:textColor="@color/gris50"
+                    android:textSize="24dp">
+
+                </EditText>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/smiley_face">
+
+                </ImageView>
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divisor2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:background="#E6E6E6"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/baseline_repeat_24"
+                        android:gravity="center_vertical"
+                        android:text="Repetir"
+                        android:textColor="@color/gris20Letra"
+                        android:textSize="12dp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_dia_semana"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/monday_radio_button"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/custom_radio_button"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="L"
+                            android:textColor="@color/text_color_selector"
+                            android:textSize="12dp" />
+
+                        <RadioButton
+                            android:id="@+id/tuesday_radio_button"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/custom_radio_button"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="M"
+                            android:textColor="@color/text_color_selector"
+                            android:textSize="12dp" />
+
+                        <RadioButton
+                            android:id="@+id/wednesday_radio_button"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/custom_radio_button"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="X"
+                            android:textColor="@color/text_color_selector"
+                            android:textSize="12dp" />
+
+                        <RadioButton
+                            android:id="@+id/thursday_radio_button"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/custom_radio_button"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="J"
+                            android:textColor="@color/text_color_selector"
+                            android:textSize="12dp" />
+
+                        <RadioButton
+                            android:id="@+id/friday_radio_button"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/custom_radio_button"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="V"
+                            android:textColor="@color/text_color_selector"
+                            android:textSize="12dp" />
+
+                        <RadioButton
+                            android:id="@+id/saturday_radio_button"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/custom_radio_button"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="S"
+                            android:textColor="@color/text_color_selector"
+                            android:textSize="12dp" />
+
+                        <RadioButton
+                            android:id="@+id/sunday_radio_button"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/custom_radio_button"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="D"
+                            android:textColor="@color/text_color_selector"
+                            android:textSize="12dp" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/frecuencia_radio_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Siempre"
+                        android:textColor="@color/gris20Letra"
+                        android:textSize="12dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hasta"
+                        android:textColor="@color/gris20Letra"
+                        android:textSize="12dp" />
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divisor3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#E6E6E6"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:text="Ejercicios seleccionados"
+                android:textColor="@color/gris50"
+                android:textSize="12dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_ejercicios_seleccionar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gris80"
+                android:orientation="horizontal"
+                android:padding="14dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
+            <EditText
+                android:id="@+id/search_ejercicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/background_search"
+                android:drawableRight="@drawable/ico_search"
+                android:elevation="4dp"
+                android:hint="Buscar ejercicio"
+                android:padding="10dp"
+                android:textColor="@color/gris80"
+                android:textStyle="italic" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_todos_ejercicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <View
+                android:id="@+id/divisor5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#E6E6E6"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripción"
+                android:textColor="@color/gris20Letra" />
+
+            <EditText
+                android:id="@+id/input_descripcion_rutina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|top"
+                android:hint="Ingresa la descripción aquí..."
+                android:inputType="textMultiLine"
+                android:lines="5" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linear_botones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btn_cancelar_rutina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/gris80"
+            android:text="Cancelar" />
+
+        <Button
+            android:id="@+id/btn_guardar_rutina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/verde50"
+            android:text="Guardar" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

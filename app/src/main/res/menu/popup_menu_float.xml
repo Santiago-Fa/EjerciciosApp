@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_create_routine"
+        android:title="Crear Rutina" />
+    <item
+        android:id="@+id/action_create_exercise"
+        android:title="Crear Ejercicio" />
+    <item
+        android:id="@+id/action_create_equipment"
+        android:title="Crear Equipamiento" />
+</menu>
